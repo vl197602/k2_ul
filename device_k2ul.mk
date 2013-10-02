@@ -23,10 +23,10 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/k2ul/overlay
 
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
-    device/htc/k2ul/ramdisk/fstab.k2ul:root/fstab.k2ul \
-    device/htc/k2ul/ramdisk/init.k2ul.rc:root/init.k2ul.rc \
-    device/htc/k2ul/ramdisk/init.usb.rc:root/init.k2ul.usb.rc \
-    device/htc/k2ul/ramdisk/ueventd.rc:root/ueventd.k2ul.rc \
+    device/htc/k2_ul/ramdisk/fstab.k2ul:root/fstab.k2ul \
+    device/htc/k2_ul/ramdisk/init.k2ul.rc:root/init.k2ul.rc \
+    device/htc/k2_ul/ramdisk/init.usb.rc:root/init.k2ul.usb.rc \
+    device/htc/k2_ul/ramdisk/ueventd.rc:root/ueventd.k2ul.rc \
 
 
 
@@ -34,22 +34,22 @@ PRODUCT_COPY_FILES += \
 
 
 
-PRODUCT_COPY_FILES += device/htc/k2ul/configs/AudioBTID.csv:system/etc/AudioBTID.csv
+PRODUCT_COPY_FILES += device/htc/k2_ul/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 
 # QC thermald config
-PRODUCT_COPY_FILES += device/htc/k2ul/configs/thermald.conf:system/etc/thermald.conf
+PRODUCT_COPY_FILES += device/htc/k2_ul/configs/thermald.conf:system/etc/thermald.conf
 
 # vold config
 PRODUCT_COPY_FILES += \
-    device/htc/k2ul/configs/vold.fstab:system/etc/vold.fstab
+    device/htc/k2_ul/configs/vold.fstab:system/etc/vold.fstab
 
 # wifi config
 PRODUCT_COPY_FILES += \
-    device/htc/k2ul/configs/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf \
-    device/htc/k2ul/firmware/fw_bcm4334.bin:/system/etc/firmware/fw_bcm4334.bin \
-    device/htc/k2ul/firmware/fw_bcm4334_apsta.bin:/system/etc/firmware/fw_bcm4334_apsta.bin \
-    device/htc/k2ul/firmware/fw_bcm4334_p2p.bin:/system/etc/firmware/fw_bcm4334_p2p.bin \
-    device/htc/k2ul/firmware/BCM4334B0_002.001.013.0942.0949.hcd:/system/etc/firmware/BCM4334B0_002.001.013.0942.0949
+    device/htc/k2_ul/configs/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf \
+    device/htc/k2_ul/firmware/fw_bcm4334.bin:/system/etc/firmware/fw_bcm4334.bin \
+    device/htc/k2_ul/firmware/fw_bcm4334_apsta.bin:/system/etc/firmware/fw_bcm4334_apsta.bin \
+    device/htc/k2_ul/firmware/fw_bcm4334_p2p.bin:/system/etc/firmware/fw_bcm4334_p2p.bin \
+    device/htc/k2_ul/firmware/BCM4334B0_002.001.013.0942.0949.hcd:/system/etc/firmware/BCM4334B0_002.001.013.0942.0949
 
 # Sound configs
 PRODUCT_COPY_FILES += \
