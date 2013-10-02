@@ -85,7 +85,7 @@ USE_OPENGL_RENDERER := true
 TARGET_NO_HW_VSYNC := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
-BOARD_EGL_CFG := device/htc/k2ul/configs/egl.cfg
+BOARD_EGL_CFG := device/htc/k2_ul/configs/egl.cfg
 
 # HWComposer
 BOARD_USES_HWCOMPOSER := true
@@ -115,7 +115,7 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 user_debug=31
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x81808000
-TARGET_PREBUILT_KERNEL := device/htc/k2ul/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := device/htc/k2_ul/prebuilt/kernel
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81808000
 
 
