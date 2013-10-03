@@ -23,10 +23,10 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/k2_ul/overlay
 
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
-    device/htc/k2_ul/ramdisk/fstab.k2ul:root/fstab.k2_ul \
-    device/htc/k2_ul/ramdisk/init.k2ul.rc:root/init.k2_ul.rc \
+    device/htc/k2_ul/ramdisk/fstab.k2_ul:root/fstab.k2_ul \
+    device/htc/k2_ul/ramdisk/init.k2_ul.rc:root/init.k2_ul.rc \
     device/htc/k2_ul/ramdisk/init.usb.rc:root/init.k2_ul.usb.rc \
-    device/htc/k2_ul/ramdisk/ueventd.rc:root/ueventd.k2_ul.rc \
+    device/htc/k2_ul/ramdisk/ueventd.k2_ulrc:root/ueventd.k2_ul.rc \
 
 
 
@@ -53,96 +53,96 @@ PRODUCT_COPY_FILES += \
 
 # Sound configs
 PRODUCT_COPY_FILES += \
-    device/htc/k2ul/dsp/soundimage/srsfx_trumedia_51.cfg:system/etc/soundimage/srsfx_trumedia_51.cfg \
-    device/htc/k2ul/dsp/soundimage/srsfx_trumedia_movie.cfg:system/etc/soundimage/srsfx_trumedia_movie.cfg \
-    device/htc/k2ul/dsp/soundimage/srsfx_trumedia_music.cfg:system/etc/soundimage/srsfx_trumedia_music.cfg \
-    device/htc/k2ul/dsp/soundimage/srsfx_trumedia_voice.cfg:system/etc/soundimage/srsfx_trumedia_voice.cfg \
-    device/htc/k2ul/dsp/soundimage/srs_geq10.cfg:system/etc/soundimage/srs_geq10.cfg
+    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_51.cfg:system/etc/soundimage/srsfx_trumedia_51.cfg \
+    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_movie.cfg:system/etc/soundimage/srsfx_trumedia_movie.cfg \
+    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_music.cfg:system/etc/soundimage/srsfx_trumedia_music.cfg \
+    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_voice.cfg:system/etc/soundimage/srsfx_trumedia_voice.cfg \
+    device/htc/k2_ul/dsp/soundimage/srs_geq10.cfg:system/etc/soundimage/srs_geq10.cfg
 
 
 PRODUCT_COPY_FILES += \
-    device/htc/k2ul/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x \
-device/htc/k2ul/dsp/snd_soc_msm/snd_soc_msm_Sitar:/system/etc/snd_soc_msm/snd_soc_msm_Sitar
+    device/htc/k2_ul/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x \
+device/htc/k2_ul/dsp/snd_soc_msm/snd_soc_msm_Sitar:/system/etc/snd_soc_msm/snd_soc_msm_Sitar
 
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
-    device/htc/k2ul/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
-    device/htc/k2ul/keylayout/projector-Keypad.kl:system/usr/keylayout/projector-Keypad.kl \
-    device/htc/k2ul/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl
+    device/htc/k2_ul/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
+    device/htc/k2_ul/keylayout/projector-Keypad.kl:system/usr/keylayout/projector-Keypad.kl \
+    device/htc/k2_ul/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl
 
 
 # Input device config
 PRODUCT_COPY_FILES += \
-    device/htc/k2ul/idc/projector_input.idc:system/usr/idc/projector_input.idc \
-    device/htc/k2ul/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
-    device/htc/k2ul/idc/qwerty.idc:system/usr/idc/qwerty.idc \
-    device/htc/k2ul/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
+    device/htc/k2_ul/idc/projector_input.idc:system/usr/idc/projector_input.idc \
+    device/htc/k2_ul/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
+    device/htc/k2_ul/idc/qwerty.idc:system/usr/idc/qwerty.idc \
+    device/htc/k2_ul/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
 
 # MSM8930 firmware
 PRODUCT_COPY_FILES += \
-    device/htc/k2ul/firmware/a300_pm4.fw:/system/etc/firmware/a300_pm4.fw \
-    device/htc/k2ul/firmware/a300_pfp.fw:/system/etc/firmware/a300_pfp.fw \
-    device/htc/k2ul/firmware/modem_fw.b00:/system/etc/firmware/modem_fw.b00 \
-    device/htc/k2ul/firmware/modem_fw.b01:/system/etc/firmware/modem_fw.b01 \
-    device/htc/k2ul/firmware/modem_fw.b02:/system/etc/firmware/modem_fw.b02 \
-    device/htc/k2ul/firmware/modem_fw.b03:/system/etc/firmware/modem_fw.b03 \
-    device/htc/k2ul/firmware/modem_fw.b04:/system/etc/firmware/modem_fw.b04 \
-    device/htc/k2ul/firmware/modem_fw.b05:/system/etc/firmware/modem_fw.b05 \
-    device/htc/k2ul/firmware/modem_fw.b06:/system/etc/firmware/modem_fw.b06 \
-    device/htc/k2ul/firmware/modem_fw.b07:/system/etc/firmware/modem_fw.b07 \
-    device/htc/k2ul/firmware/modem_fw.b08:/system/etc/firmware/modem_fw.b08 \
-    device/htc/k2ul/firmware/modem_fw.b09:/system/etc/firmware/modem_fw.b09 \
-    device/htc/k2ul/firmware/modem_fw.b10:/system/etc/firmware/modem_fw.b10 \
-    device/htc/k2ul/firmware/modem_fw.b11:/system/etc/firmware/modem_fw.b11 \
-    device/htc/k2ul/firmware/modem_fw.b13:/system/etc/firmware/modem_fw.b13 \
-    device/htc/k2ul/firmware/modem_fw.b14:/system/etc/firmware/modem_fw.b14 \
-    device/htc/k2ul/firmware/modem_fw.b21:/system/etc/firmware/modem_fw.b21 \
-    device/htc/k2ul/firmware/modem_fw.b22:/system/etc/firmware/modem_fw.b22 \
-    device/htc/k2ul/firmware/modem_fw.b23:/system/etc/firmware/modem_fw.b23 \
-    device/htc/k2ul/firmware/modem_fw.b25:/system/etc/firmware/modem_fw.b25 \
-    device/htc/k2ul/firmware/modem_fw.b26:/system/etc/firmware/modem_fw.b26 \
-    device/htc/k2ul/firmware/modem_fw.b29:/system/etc/firmware/modem_fw.b29 \
-    device/htc/k2ul/firmware/modem_fw.mdt:/system/etc/firmware/modem_fw.mdt \
- device/htc/k2ul/firmware/modem_f1.b00:/system/etc/firmware/modem_f1.b00 \
-    device/htc/k2ul/firmware/modem_f1.b01:/system/etc/firmware/modem_f1.b01 \
-    device/htc/k2ul/firmware/modem_f1.b02:/system/etc/firmware/modem_f1.b02 \
-    device/htc/k2ul/firmware/modem_f1.b03:/system/etc/firmware/modem_f1.b03 \
-    device/htc/k2ul/firmware/modem_f1.b04:/system/etc/firmware/modem_f1.b04 \
-    device/htc/k2ul/firmware/modem_f1.b05:/system/etc/firmware/modem_f1.b05 \
-    device/htc/k2ul/firmware/modem_f1.b06:/system/etc/firmware/modem_f1.b06 \
-    device/htc/k2ul/firmware/modem_f1.b07:/system/etc/firmware/modem_f1.b07 \
-    device/htc/k2ul/firmware/modem_f1.b08:/system/etc/firmware/modem_f1.b08 \
-    device/htc/k2ul/firmware/modem_f1.b09:/system/etc/firmware/modem_f1.b09 \
-    device/htc/k2ul/firmware/modem_f1.b10:/system/etc/firmware/modem_f1.b10 \
-    device/htc/k2ul/firmware/modem_f1.b11:/system/etc/firmware/modem_f1.b11 \
-    device/htc/k2ul/firmware/modem_f1.b13:/system/etc/firmware/modem_f1.b13 \
-    device/htc/k2ul/firmware/modem_f1.b14:/system/etc/firmware/modem_f1.b14 \
-    device/htc/k2ul/firmware/modem_f1.b21:/system/etc/firmware/modem_f1.b21 \
-    device/htc/k2ul/firmware/modem_f1.b22:/system/etc/firmware/modem_f1.b22 \
-    device/htc/k2ul/firmware/modem_f1.b23:/system/etc/firmware/modem_f1.b23 \
-    device/htc/k2ul/firmware/modem_f1.b25:/system/etc/firmware/modem_f1.b25 \
-    device/htc/k2ul/firmware/modem_f1.b26:/system/etc/firmware/modem_f1.b26 \
-    device/htc/k2ul/firmware/modem_f1.b29:/system/etc/firmware/modem_f1.b29 \
- device/htc/k2ul/firmware/modem_f1.mdt:/system/etc/firmware/modem_f1.mdt \
-    device/htc/k2ul/firmware/modem.b00:/system/etc/firmware/modem.b00 \
-    device/htc/k2ul/firmware/modem.b01:/system/etc/firmware/modem.b01 \
-    device/htc/k2ul/firmware/modem.b02:/system/etc/firmware/modem.b02 \
-    device/htc/k2ul/firmware/modem.b03:/system/etc/firmware/modem.b03 \
-    device/htc/k2ul/firmware/modem.b04:/system/etc/firmware/modem.b04 \
-    device/htc/k2ul/firmware/modem.b05:/system/etc/firmware/modem.b05 \
-    device/htc/k2ul/firmware/modem.b06:/system/etc/firmware/modem.b06 \
-    device/htc/k2ul/firmware/modem.b07:/system/etc/firmware/modem.b07 \
-    device/htc/k2ul/firmware/modem.b08:/system/etc/firmware/modem.b08 \
-    device/htc/k2ul/firmware/modem.b09:/system/etc/firmware/modem.b09 \
-    device/htc/k2ul/firmware/modem.b10:/system/etc/firmware/modem.b10 \
-    device/htc/k2ul/firmware/modem.mdt:/system/etc/firmware/modem.mdt \
-    device/htc/k2ul/firmware/q6.b00:/system/etc/firmware/q6.b00 \
-    device/htc/k2ul/firmware/q6.b01:/system/etc/firmware/q6.b01 \
-    device/htc/k2ul/firmware/q6.b03:/system/etc/firmware/q6.b03 \
-    device/htc/k2ul/firmware/q6.b04:/system/etc/firmware/q6.b04 \
-    device/htc/k2ul/firmware/q6.b05:/system/etc/firmware/q6.b05 \
-    device/htc/k2ul/firmware/q6.b06:/system/etc/firmware/q6.b06 \
-    device/htc/k2ul/firmware/q6.mdt:/system/etc/firmware/q6.mdt
+    device/htc/k2_ul/firmware/a300_pm4.fw:/system/etc/firmware/a300_pm4.fw \
+    device/htc/k2_ul/firmware/a300_pfp.fw:/system/etc/firmware/a300_pfp.fw \
+    device/htc/k2_ul/firmware/modem_fw.b00:/system/etc/firmware/modem_fw.b00 \
+    device/htc/k2_ul/firmware/modem_fw.b01:/system/etc/firmware/modem_fw.b01 \
+    device/htc/k2_ul/firmware/modem_fw.b02:/system/etc/firmware/modem_fw.b02 \
+    device/htc/k2_ul/firmware/modem_fw.b03:/system/etc/firmware/modem_fw.b03 \
+    device/htc/k2_ul/firmware/modem_fw.b04:/system/etc/firmware/modem_fw.b04 \
+    device/htc/k2_ul/firmware/modem_fw.b05:/system/etc/firmware/modem_fw.b05 \
+    device/htc/k2_ul/firmware/modem_fw.b06:/system/etc/firmware/modem_fw.b06 \
+    device/htc/k2_ul/firmware/modem_fw.b07:/system/etc/firmware/modem_fw.b07 \
+    device/htc/k2_ul/firmware/modem_fw.b08:/system/etc/firmware/modem_fw.b08 \
+    device/htc/k2_ul/firmware/modem_fw.b09:/system/etc/firmware/modem_fw.b09 \
+    device/htc/k2_ul/firmware/modem_fw.b10:/system/etc/firmware/modem_fw.b10 \
+    device/htc/k2_ul/firmware/modem_fw.b11:/system/etc/firmware/modem_fw.b11 \
+    device/htc/k2_ul/firmware/modem_fw.b13:/system/etc/firmware/modem_fw.b13 \
+    device/htc/k2_ul/firmware/modem_fw.b14:/system/etc/firmware/modem_fw.b14 \
+    device/htc/k2_ul/firmware/modem_fw.b21:/system/etc/firmware/modem_fw.b21 \
+    device/htc/k2_ul/firmware/modem_fw.b22:/system/etc/firmware/modem_fw.b22 \
+    device/htc/k2_ul/firmware/modem_fw.b23:/system/etc/firmware/modem_fw.b23 \
+    device/htc/k2_ul/firmware/modem_fw.b25:/system/etc/firmware/modem_fw.b25 \
+    device/htc/k2_ul/firmware/modem_fw.b26:/system/etc/firmware/modem_fw.b26 \
+    device/htc/k2_ul/firmware/modem_fw.b29:/system/etc/firmware/modem_fw.b29 \
+    device/htc/k2_ul/firmware/modem_fw.mdt:/system/etc/firmware/modem_fw.mdt \
+ device/htc/k2_ul/firmware/modem_f1.b00:/system/etc/firmware/modem_f1.b00 \
+    device/htc/k2_ul/firmware/modem_f1.b01:/system/etc/firmware/modem_f1.b01 \
+    device/htc/k2_ul/firmware/modem_f1.b02:/system/etc/firmware/modem_f1.b02 \
+    device/htc/k2_ul/firmware/modem_f1.b03:/system/etc/firmware/modem_f1.b03 \
+    device/htc/k2_ul/firmware/modem_f1.b04:/system/etc/firmware/modem_f1.b04 \
+    device/htc/k2_ul/firmware/modem_f1.b05:/system/etc/firmware/modem_f1.b05 \
+    device/htc/k2_ul/firmware/modem_f1.b06:/system/etc/firmware/modem_f1.b06 \
+    device/htc/k2_ul/firmware/modem_f1.b07:/system/etc/firmware/modem_f1.b07 \
+    device/htc/k2_ul/firmware/modem_f1.b08:/system/etc/firmware/modem_f1.b08 \
+    device/htc/k2_ul/firmware/modem_f1.b09:/system/etc/firmware/modem_f1.b09 \
+    device/htc/k2_ul/firmware/modem_f1.b10:/system/etc/firmware/modem_f1.b10 \
+    device/htc/k2_ul/firmware/modem_f1.b11:/system/etc/firmware/modem_f1.b11 \
+    device/htc/k2_ul/firmware/modem_f1.b13:/system/etc/firmware/modem_f1.b13 \
+    device/htc/k2_ul/firmware/modem_f1.b14:/system/etc/firmware/modem_f1.b14 \
+    device/htc/k2_ul/firmware/modem_f1.b21:/system/etc/firmware/modem_f1.b21 \
+    device/htc/k2_ul/firmware/modem_f1.b22:/system/etc/firmware/modem_f1.b22 \
+    device/htc/k2_ul/firmware/modem_f1.b23:/system/etc/firmware/modem_f1.b23 \
+    device/htc/k2_ul/firmware/modem_f1.b25:/system/etc/firmware/modem_f1.b25 \
+    device/htc/k2_ul/firmware/modem_f1.b26:/system/etc/firmware/modem_f1.b26 \
+    device/htc/k2_ul/firmware/modem_f1.b29:/system/etc/firmware/modem_f1.b29 \
+ device/htc/k2_ul/firmware/modem_f1.mdt:/system/etc/firmware/modem_f1.mdt \
+    device/htc/k2_ul/firmware/modem.b00:/system/etc/firmware/modem.b00 \
+    device/htc/k2_ul/firmware/modem.b01:/system/etc/firmware/modem.b01 \
+    device/htc/k2_ul/firmware/modem.b02:/system/etc/firmware/modem.b02 \
+    device/htc/k2_ul/firmware/modem.b03:/system/etc/firmware/modem.b03 \
+    device/htc/k2_ul/firmware/modem.b04:/system/etc/firmware/modem.b04 \
+    device/htc/k2_ul/firmware/modem.b05:/system/etc/firmware/modem.b05 \
+    device/htc/k2_ul/firmware/modem.b06:/system/etc/firmware/modem.b06 \
+    device/htc/k2_ul/firmware/modem.b07:/system/etc/firmware/modem.b07 \
+    device/htc/k2_ul/firmware/modem.b08:/system/etc/firmware/modem.b08 \
+    device/htc/k2_ul/firmware/modem.b09:/system/etc/firmware/modem.b09 \
+    device/htc/k2_ul/firmware/modem.b10:/system/etc/firmware/modem.b10 \
+    device/htc/k2_ul/firmware/modem.mdt:/system/etc/firmware/modem.mdt \
+    device/htc/k2_ul/firmware/q6.b00:/system/etc/firmware/q6.b00 \
+    device/htc/k2_ul/firmware/q6.b01:/system/etc/firmware/q6.b01 \
+    device/htc/k2_ul/firmware/q6.b03:/system/etc/firmware/q6.b03 \
+    device/htc/k2_ul/firmware/q6.b04:/system/etc/firmware/q6.b04 \
+    device/htc/k2_ul/firmware/q6.b05:/system/etc/firmware/q6.b05 \
+    device/htc/k2_ul/firmware/q6.b06:/system/etc/firmware/q6.b06 \
+    device/htc/k2_ul/firmware/q6.mdt:/system/etc/firmware/q6.mdt
 
 # GPS
 #PRODUCT_PACKAGES += \
@@ -155,7 +155,7 @@ PRODUCT_PACKAGES += \
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
 
 # Extra properties
@@ -184,8 +184,8 @@ $(call inherit-product-if-exists, vendor/htc/k2ul/k2ul-vendor.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # Discard inherited values and use our own instead.
-PRODUCT_DEVICE := k2ul
-PRODUCT_NAME := k2ul
+PRODUCT_DEVICE := k2_ul
+PRODUCT_NAME := k2_ul
 PRODUCT_BRAND := htc
 PRODUCT_MODEL := One SV
 PRODUCT_MANUFACTURER := HTC
