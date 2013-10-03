@@ -25,7 +25,7 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/k2_ul/overlay
 PRODUCT_COPY_FILES += \
     device/htc/k2_ul/ramdisk/fstab.k2_ul:root/fstab.k2_ul \
     device/htc/k2_ul/ramdisk/init.k2_ul.rc:root/init.k2_ul.rc \
-    device/htc/k2_ul/ramdisk/init.usb.rc:root/init.k2_ul.usb.rc \
+    device/htc/k2_ul/ramdisk/init.k2_ul_usb.rc:root/init.k2_ul.usb.rc \
     device/htc/k2_ul/ramdisk/ueventd.k2_ulrc:root/ueventd.k2_ul.rc \
 
 
@@ -178,7 +178,7 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_LOCALES += en_US hdpi
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/k2ul/k2ul-vendor.mk)
+$(call inherit-product-if-exists, vendor/htc/k2ul/k2_ul-vendor.mk)
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
