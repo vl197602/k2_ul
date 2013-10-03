@@ -2,7 +2,7 @@
 PRODUCT_RELEASE_NAME := k2_ul
 
 # Inherit device configuration
-$(call inherit-product, device/htc/k2ul/device_k2ul.mk)
+$(call inherit-product, device/htc/k2_ul/device_k2_ul.mk)
 # Boot animation
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
