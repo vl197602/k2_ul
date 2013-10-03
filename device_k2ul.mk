@@ -19,14 +19,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # common msm8960 configs
 $(call inherit-product, device/htc/msm8960-common/msm8960.mk)
 # Overlay files
-DEVICE_PACKAGE_OVERLAYS += device/htc/k2ul/overlay
+DEVICE_PACKAGE_OVERLAYS += device/htc/k2_ul/overlay
 
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
-    device/htc/k2_ul/ramdisk/fstab.k2ul:root/fstab.k2ul \
-    device/htc/k2_ul/ramdisk/init.k2ul.rc:root/init.k2ul.rc \
-    device/htc/k2_ul/ramdisk/init.usb.rc:root/init.k2ul.usb.rc \
-    device/htc/k2_ul/ramdisk/ueventd.rc:root/ueventd.k2ul.rc \
+    device/htc/k2_ul/ramdisk/fstab.k2ul:root/fstab.k2_ul \
+    device/htc/k2_ul/ramdisk/init.k2ul.rc:root/init.k2_ul.rc \
+    device/htc/k2_ul/ramdisk/init.usb.rc:root/init.k2_ul.usb.rc \
+    device/htc/k2_ul/ramdisk/ueventd.rc:root/ueventd.k2_ul.rc \
 
 
 
