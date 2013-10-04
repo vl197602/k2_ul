@@ -1,13 +1,13 @@
 # Executable files
-bin/akmd
-bin/time_daemon
-
 # Configuration files
 etc/agps_rm
 
 # Executable files
+bin/akmd
 bin/cand
 bin/charging
+bin/ewtzmud
+bin/hci_qcomm_init
 bin/mm-qcamera-daemon
 bin/mpdecision
 bin/netmgrd
@@ -15,35 +15,31 @@ bin/netsharing
 bin/qmuxd
 bin/rmt_storage
 bin/thermald
+bin/zchgd
 
 # Audio
 lib/libacdbloader.so
 lib/libaudcal.so
 
 # Camera
-lib/libchromatix_s5k4e5yx_default_video.so
-lib/libchromatix_s5k4e5yx_hdr.so
-lib/libchromatix_s5k4e5yx_hfr.so
-lib/libchromatix_s5k4e5yx_preview.so
-lib/libchromatix_s5k4e5yx_zsl.so
-lib/libchromatix_s5k6a1gx_default_video.so
-lib/libchromatix_s5k6a1gx_preview.so
-lib/libchromatix_s5k6a1gx_zsl.so
+lib/libchromatix_s5k3h2yx_default_video.so
+lib/libchromatix_s5k3h2yx_hdr.so
+lib/libchromatix_s5k3h2yx_hfr.so
+lib/libchromatix_s5k3h2yx_preview.so
+lib/libchromatix_s5k3h2yx_zsl.so
 lib/libcameraface.so
 lib/libcamerapp.so
 lib/libcam_oem_plugin.so
+lib/libDxOAF.so
 lib/libgemini.so
 lib/libmmcamera_frameproc.so
 lib/libmmcamera_rawchipproc.so
-lib/libmmcamera_statsproc31.so
+lib/libmmcamera_statsproc30.so
 lib/libmmipl.so
 lib/libmmjpeg.so
 lib/liboemcamera.so
-lib/libOlaEngineNew.so
+lib/libOlaEngine.so
 lib/libposteffect.so
-
-# GPS
-lib/libloc_api_v02.so
 
 # Graphics
 lib/egl/eglsubAndroid.so
@@ -51,13 +47,21 @@ lib/egl/libEGL_adreno200.so
 lib/egl/libGLESv1_CM_adreno200.so
 lib/egl/libGLESv2_adreno200.so
 lib/egl/libq3dtools_adreno200.so
-lib/egl/libGLESv2S3D_adreno200.so
 lib/libC2D2.so
 lib/libc2d2_z180.so
 lib/libgsl.so
-lib/libOpenCL.so
+
 lib/libOpenVG.so
 lib/libsc-a2xx.so
+
+# GPS
+lib/hw/gps.default.so
+lib/libgps.so
+lib/libgps.utils.so
+lib/libloc_adapter.so
+lib/libloc_api_v02.so
+lib/libloc_eng.so
+lib/libloc_ext.so
 
 # Media libraries
 lib/libmmosal.so
