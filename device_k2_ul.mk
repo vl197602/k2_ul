@@ -16,10 +16,10 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-# call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/k2ul/k2_ul-vendor.mk)
 # common msm8960 configs
 $(call inherit-product, device/htc/msm8960-common/msm8960.mk)
+# call the proprietary setup
+$(call inherit-product-if-exists, vendor/htc/k2ul/k2_ul-vendor.mk)
 # Overlay files
 DEVICE_PACKAGE_OVERLAYS += device/htc/k2_ul/overlay
 
@@ -27,13 +27,16 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/k2_ul/overlay
 PRODUCT_COPY_FILES += \
     device/htc/k2_ul/ramdisk/fstab.k2_ul:root/fstab.k2_ul \
     device/htc/k2_ul/ramdisk/init.k2_ul.rc:root/init.k2_ul.rc \
-    device/htc/k2_ul/ramdisk/init.k2_ul_usb.rc:root/init.k2_ul.usb.rc \
-    device/htc/k2_ul/ramdisk/ueventd.k2_ulrc:root/ueventd.k2_ul.rc \
+    device/htc/k2_ul/ramdisk/init.k2_ul_usb.rc:root/init.k2_ul_usb.rc \
+    device/htc/k2_ul/ramdisk/ueventd.k2_ul.rc:root/ueventd.k2_ul.rc \
 
-
-
-
-
+#Set default.prop properties for root + adb
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    	ro.allow.mock.location=1 \
+	ro.secure=0 \
+	persist.service.adb.enable=1 \
+	ro.phone_storage=1 \
+	service.adb.root=1
 
 
 PRODUCT_COPY_FILES += device/htc/k2_ul/configs/AudioBTID.csv:system/etc/AudioBTID.csv
@@ -179,8 +182,6 @@ PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_LOCALES += en_US hdpi
 
-# call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/k2ul/k2_ul-vendor.mk)
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
