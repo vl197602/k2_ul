@@ -27,7 +27,7 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/k2_ul/overlay
 PRODUCT_COPY_FILES += \
     device/htc/k2_ul/ramdisk/fstab.k2_ul:root/fstab.k2_ul \
     device/htc/k2_ul/ramdisk/init.k2_ul.rc:root/init.k2_ul.rc \
-    device/htc/k2_ul/ramdisk/init.k2_ul_usb.rc:root/init.k2_ul_usb.rc \
+    device/htc/k2_ul/ramdisk/init.k2_ul_usb.rc:root/init.k2_ul.usb.rc \
     device/htc/k2_ul/ramdisk/ueventd.k2_ul.rc:root/ueventd.k2_ul.rc \
 
 #Set default.prop properties for root + adb
