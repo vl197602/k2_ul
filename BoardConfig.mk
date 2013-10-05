@@ -26,9 +26,9 @@
 
 
 #Built from source kernel
-# TARGET_KERNEL_CONFIG	:= k2_ul_defconfig
-# TARGET_KERNEL_SOURCE	:= kernel/kernel_htc_k2_01
-# TARGET_ARH	:= arm
+ TARGET_KERNEL_CONFIG	:= k2_ul_defconfig
+ TARGET_KERNEL_SOURCE	:= kernel/k2_ul
+ TARGET_ARH	:= arm
 
 # inherit from common msm8960
 -include device/htc/msm8960-common/BoardConfigCommon.mk
@@ -119,7 +119,7 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 user_debug=31
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x81808000
-TARGET_PREBUILT_KERNEL := device/htc/k2_ul/prebuilt/kernel
+# TARGET_PREBUILT_KERNEL := device/htc/k2_ul/prebuilt/kernel
 # BOARD_FORCE_RAMDISK_ADDRESS := 0x81808000
 
 
