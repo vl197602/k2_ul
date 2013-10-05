@@ -33,8 +33,7 @@ TARGET_ARH	:= arm
 # inherit from common msm8960
 -include device/htc/msm8960-common/BoardConfigCommon.mk
 
-# call the proprietary setup
-$(call inherit-product-if-exists, vendor/htc/k2ul/k2_ul-vendor.mk)
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := k2_ul
 
