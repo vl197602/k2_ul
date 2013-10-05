@@ -25,7 +25,10 @@
 # against the traditional rules of inheritance).
 
 
-
+#Built from source kernel
+TARGET_KERNEL_CONFIG	:= k2_ul_defconfig
+TARGET_KERNEL_SOURCE	:= kernel/kernel_htc_k2_01
+TARGET_ARH	:= arm
 
 # inherit from common msm8960
 -include device/htc/msm8960-common/BoardConfigCommon.mk
@@ -48,47 +51,47 @@ TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 # Krait optimizations
-TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
-TARGET_USE_KRAIT_PLD_SET := true
-TARGET_KRAIT_BIONIC_PLDOFFS := 10
-TARGET_KRAIT_BIONIC_PLDTHRESH := 10
-TARGET_KRAIT_BIONIC_BBTHRESH := 64
-TARGET_KRAIT_BIONIC_PLDSIZE := 64
+# TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
+# TARGET_USE_KRAIT_PLD_SET := true
+# TARGET_KRAIT_BIONIC_PLDOFFS := 10
+# TARGET_KRAIT_BIONIC_PLDTHRESH := 10
+# TARGET_KRAIT_BIONIC_BBTHRESH := 64
+# TARGET_KRAIT_BIONIC_PLDSIZE := 64
 
 # Flags
-COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
+# COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
 
 # QCOM hardware
-BOARD_USES_QCOM_HARDWARE := true
+# BOARD_USES_QCOM_HARDWARE := true
 
 # Audio
-BOARD_USES_ALSA_AUDIO := true
-BOARD_HAVE_HTC_AUDIO := true
+# BOARD_USES_ALSA_AUDIO := true
+# BOARD_HAVE_HTC_AUDIO := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/k2_ul/bluetooth
 
 # FM radio
-BOARD_HAVE_QCOM_FM := true
-COMMON_GLOBAL_CFLAGS += -DQCOM_FM_ENABLED
+# BOARD_HAVE_QCOM_FM := true
+# COMMON_GLOBAL_CFLAGS += -DQCOM_FM_ENABLED
 
 # QCOM GPS
 #BOARD_USES_QCOM_GPS := true
 
 # Graphics
-COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
-USE_OPENGL_RENDERER := true
-TARGET_NO_HW_VSYNC := true
-TARGET_USES_C2D_COMPOSITION := true
-TARGET_USES_ION := true
-BOARD_EGL_CFG := device/htc/k2_ul/configs/egl.cfg
+# COMMON_GLOBAL_CFLAGS += -DQCOM_NO_SECURE_PLAYBACK
+# USE_OPENGL_RENDERER := true
+# TARGET_NO_HW_VSYNC := true
+# TARGET_USES_C2D_COMPOSITION := true
+# TARGET_USES_ION := true
+# BOARD_EGL_CFG := device/htc/k2_ul/configs/egl.cfg
 
 # HWComposer
-BOARD_USES_HWCOMPOSER := true
+# BOARD_USES_HWCOMPOSER := true
 
 # Wifi
 WIFI_BAND := 802_11_ABGN
@@ -103,24 +106,24 @@ WIFI_DRIVER_FW_PATH_AP           := "/system/etc/firmware/fw_bcm4334_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P          := "/system/etc/firmware/fw_bcm4334_p2p.bin"
 WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path"
 
-$(shell mkdir -p $(OUT)/obj/SHARED_LIBRARIES/libril_intermediates)
-$(shell touch $(OUT)/obj/SHARED_LIBRARIES/libril_intermediates/export_includes)
+# $(shell mkdir -p $(OUT)/obj/SHARED_LIBRARIES/libril_intermediates)
+# $(shell touch $(OUT)/obj/SHARED_LIBRARIES/libril_intermediates/export_includes)
 
 # Webkit
-ENABLE_WEBGL := true
-TARGET_FORCE_CPU_UPLOAD := true
+# ENABLE_WEBGL := true
+# TARGET_FORCE_CPU_UPLOAD := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 user_debug=31
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x81808000
-TARGET_PREBUILT_KERNEL := device/htc/k2_ul/prebuilt/kernel
-BOARD_FORCE_RAMDISK_ADDRESS := 0x81808000
+# TARGET_PREBUILT_KERNEL := device/htc/k2_ul/prebuilt/kernel
+# BOARD_FORCE_RAMDISK_ADDRESS := 0x81808000
 
 
 # Use libril in the device tree
-# BOARD_PROVIDES_LIBRIL := true
+BOARD_PROVIDES_LIBRIL := true
 
 # cat /proc/emmc
 #dev:        size     erasesize name
@@ -151,17 +154,18 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776704
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1426062336
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 1241513472
-BOARD_FLASH_BLOCK_SIZE := 131072
+BOARD_FLASH_BLOCK_SIZE :=512
 
 # to enable the GPS HAL
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := k2_ul
 
 # AMSS version to use for GPS
-BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 3200
+# BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 3200
 
 # Vold
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 BOARD_VOLD_MAX_PARTITIONS := 36
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
-
+# Lights
+TARGET_PROVIDES_LIBLIGHTS := true
