@@ -107,8 +107,9 @@ WIFI_DRIVER_FW_PATH_AP           := "/system/etc/firmware/fw_bcm4334_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P          := "/system/etc/firmware/fw_bcm4334_p2p.bin"
 WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path"
 
-# $(shell mkdir -p $(OUT)/obj/SHARED_LIBRARIES/libril_intermediates)
-# $(shell touch $(OUT)/obj/SHARED_LIBRARIES/libril_intermediates/export_includes)
+$(shell mkdir -p $(OUT)/obj/EXECUTABLES/alsaucm_test_intermediates)
+$(shell touch $(OUT)/obj/EXECUTABLES/alsaucm_test_intermediates/export_includes)
+
 
 # Webkit
 # ENABLE_WEBGL := true
