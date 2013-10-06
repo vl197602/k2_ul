@@ -26,9 +26,9 @@
 
 
 #Built from source kernel
- TARGET_KERNEL_CONFIG	:= k2_ul_defconfig
- TARGET_KERNEL_SOURCE	:= kernel/k2_ul
- TARGET_ARH	:= arm
+ # TARGET_KERNEL_CONFIG	:= k2_ul_defconfig
+ # TARGET_KERNEL_SOURCE	:= kernel/k2_ul
+ # TARGET_ARH	:= arm
 
 # inherit from common msm8960
 -include device/htc/msm8960-common/BoardConfigCommon.mk
@@ -38,18 +38,18 @@
 TARGET_BOOTLOADER_BOARD_NAME := k2_ul
 
 # Platform
-TARGET_BOARD_PLATFORM := msm8960
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno305
+# TARGET_BOARD_PLATFORM := msm8960
+# TARGET_BOARD_PLATFORM_GPU := qcom-adreno305
 
 
 # Architecture
-TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_VARIANT := cortex-a9
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_SMP := true
-ARCH_ARM_HAVE_TLS_REGISTER := true
+# TARGET_ARCH := arm
+# TARGET_ARCH_VARIANT := armv7-a-neon
+# TARGET_CPU_VARIANT := cortex-a9
+# TARGET_CPU_ABI := armeabi-v7a
+# TARGET_CPU_ABI2 := armeabi
+# TARGET_CPU_SMP := true
+# ARCH_ARM_HAVE_TLS_REGISTER := true
 
 # Krait optimizations
 # TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
@@ -74,7 +74,7 @@ TARGET_SCREEN_WIDTH := 480
 # BOARD_HAVE_HTC_AUDIO := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/k2_ul/bluetooth
+# BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/k2_ul/bluetooth
 
 # FM radio
 # BOARD_HAVE_QCOM_FM := true
@@ -115,12 +115,12 @@ WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path
 # TARGET_FORCE_CPU_UPLOAD := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 user_debug=31
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x81808000
-# TARGET_PREBUILT_KERNEL := device/htc/k2_ul/prebuilt/kernel
-# BOARD_FORCE_RAMDISK_ADDRESS := 0x81808000
+# BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x81808000
+TARGET_PREBUILT_KERNEL := device/htc/k2_ul/prebuilt/kernel
+BOARD_FORCE_RAMDISK_ADDRESS := 0x81808000
 
 
 # Use libril in the device tree
@@ -158,7 +158,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1241513472
 BOARD_FLASH_BLOCK_SIZE :=512
 
 # to enable the GPS HAL
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := k2_ul
+# BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := k2_ul
 
 # AMSS version to use for GPS
 # BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 3200
