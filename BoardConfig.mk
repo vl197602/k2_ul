@@ -119,10 +119,10 @@ $(shell touch $(OUT)/obj/EXECUTABLES/alsaucm_test_intermediates/export_includes)
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 
 BOARD_KERNEL_BASE := 0x80400000
 BOARD_KERNEL_PAGESIZE := 2048
-# BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x81808000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x81808000
 TARGET_PREBUILT_KERNEL := device/htc/k2_ul/prebuilt/kernel
 TARGET_KERNEL_CONFIG := k2_ul_defconfig
-BOARD_FORCE_RAMDISK_ADDRESS := 0x81808000
+# BOARD_FORCE_RAMDISK_ADDRESS := 0x81808000
 
 
 # Use libril in the device tree
