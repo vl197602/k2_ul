@@ -41,24 +41,8 @@ TARGET_BOOTLOADER_BOARD_NAME := k2_ul
 # TARGET_BOARD_PLATFORM := msm8960
 # TARGET_BOARD_PLATFORM_GPU := qcom-adreno305
 
-
-# Architecture
-TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_VARIANT := cortex-a9
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_SMP := true
-ARCH_ARM_HAVE_TLS_REGISTER := true
 # HTCLOG
 COMMON_GLOBAL_CFLAGS += -DHTCLOG
-# Krait optimizations
-# TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
-# TARGET_USE_KRAIT_PLD_SET := true
-# TARGET_KRAIT_BIONIC_PLDOFFS := 10
-# TARGET_KRAIT_BIONIC_PLDTHRESH := 10
-# TARGET_KRAIT_BIONIC_BBTHRESH := 64
-# TARGET_KRAIT_BIONIC_PLDSIZE := 64
 
 # Flags
 # COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
@@ -107,9 +91,6 @@ WIFI_DRIVER_FW_PATH_STA          := "/system/etc/firmware/fw_bcm4334.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/system/etc/firmware/fw_bcm4334_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P          := "/system/etc/firmware/fw_bcm4334_p2p.bin"
 WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path"
-
-$(shell mkdir -p $(OUT)/obj/EXECUTABLES/alsaucm_test_intermediates)
-$(shell touch $(OUT)/obj/EXECUTABLES/alsaucm_test_intermediates/export_includes)
 
 
 # Webkit
