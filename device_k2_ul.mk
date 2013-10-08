@@ -25,10 +25,10 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/k2_ul/overlay
 
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
-    device/htc/k2_ul/ramdisk/fstab.k2_ul:root/fstab.k2_ul \
-    device/htc/k2_ul/ramdisk/init.k2_ul.rc:root/init.k2_ul.rc \
-    device/htc/k2_ul/ramdisk/init.k2_ul.usb.rc:root/init.k2_ul.usb.rc \
-    device/htc/k2_ul/ramdisk/ueventd.k2_ul.rc:root/ueventd.k2_ul.rc \
+    device/htc/k2_ul/ramdisk/fstab.k2_ul:/root/fstab.k2_ul \
+    device/htc/k2_ul/ramdisk/init.k2_ul.rc:/root/init.k2_ul.rc \
+    device/htc/k2_ul/ramdisk/init.k2_ul.usb.rc:/root/init.k2_ul.usb.rc \
+    device/htc/k2_ul/ramdisk/ueventd.k2_ul.rc:/root/ueventd.k2_ul.rc \
 
 #Set default.prop properties for root + adb
 ADDITIONAL_DEFAULT_PROPERTIES += \
@@ -39,14 +39,14 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 	service.adb.root=1
 
 
-PRODUCT_COPY_FILES += device/htc/k2_ul/configs/AudioBTID.csv:system/etc/AudioBTID.csv
+PRODUCT_COPY_FILES += device/htc/k2_ul/configs/AudioBTID.csv:/system/etc/AudioBTID.csv
 
 # QC thermald config
-PRODUCT_COPY_FILES += device/htc/k2_ul/configs/thermald.conf:system/etc/thermald.conf
+PRODUCT_COPY_FILES += device/htc/k2_ul/configs/thermald.conf:/system/etc/thermald.conf
 
 # vold config
 PRODUCT_COPY_FILES += \
-    device/htc/k2_ul/configs/vold.fstab:system/etc/vold.fstab
+    device/htc/k2_ul/configs/vold.fstab:/system/etc/vold.fstab
 
 # wifi config
 PRODUCT_COPY_FILES += \
@@ -58,30 +58,39 @@ PRODUCT_COPY_FILES += \
 
 # Sound configs
 PRODUCT_COPY_FILES += \
-    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_51.cfg:system/etc/soundimage/srsfx_trumedia_51.cfg \
-    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_movie.cfg:system/etc/soundimage/srsfx_trumedia_movie.cfg \
-    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_music.cfg:system/etc/soundimage/srsfx_trumedia_music.cfg \
-    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_voice.cfg:system/etc/soundimage/srsfx_trumedia_voice.cfg \
-    device/htc/k2_ul/dsp/soundimage/srs_geq10.cfg:system/etc/soundimage/srs_geq10.cfg
+    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_51.cfg:/system/etc/soundimage/srsfx_trumedia_51.cfg \
+    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_movie.cfg:/system/etc/soundimage/srsfx_trumedia_movie.cfg \
+    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_music.cfg:/system/etc/soundimage/srsfx_trumedia_music.cfg \
+    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_voice.cfg:/system/etc/soundimage/srsfx_trumedia_voice.cfg \
+    device/htc/k2_ul/dsp/soundimage/srs_geq10.cfg:/system/etc/soundimage/srs_geq10.cfg
 
 
 PRODUCT_COPY_FILES += \
     device/htc/k2_ul/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x \
 device/htc/k2_ul/dsp/snd_soc_msm/snd_soc_msm_Sitar:/system/etc/snd_soc_msm/snd_soc_msm_Sitar
 
+PRODUCT_COPY_FILES += \
+    device/htc/k2_ul/modules/bcmdhd.ko:/system/lib/modules//bcmdhd.ko \
+    device/htc/k2_ul/modules/ansi_cprng.ko:/system/lib/modules/ansi_cprng.ko \
+    device/htc/k2_ul/modules/bluetooth-power.ko:/system/lib/modules/bluetooth-power.ko \
+    device/htc/k2_ul/modules/gspca_main.ko:/system/lib/modules/gspca_main.ko \
+   device/htc/k2_ul/modules/lcd.ko:/system/lib/modules/lcd.ko \
+   device/htc/k2_ul/modules/msm-buspm-dev.ko:/system/lib/modules/msm-buspm-dev.ko \
+  device/htc/k2_ul/module/reset_modem.ko:/system/lib/modules/reset_modem.ko
+
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
-    device/htc/k2_ul/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
-    device/htc/k2_ul/keylayout/projector-Keypad.kl:system/usr/keylayout/projector-Keypad.kl \
-    device/htc/k2_ul/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl
+    device/htc/k2_ul/keylayout/keypad_8960.kl:/system/usr/keylayout/keypad_8960.kl \
+    device/htc/k2_ul/keylayout/projector-Keypad.kl:/system/usr/keylayout/projector-Keypad.kl \
+    device/htc/k2_ul/keylayout/synaptics-rmi-touchscreen.kl:/system/usr/keylayout/synaptics-rmi-touchscreen.kl
 
 
 # Input device config
 PRODUCT_COPY_FILES += \
-    device/htc/k2_ul/idc/projector_input.idc:system/usr/idc/projector_input.idc \
-    device/htc/k2_ul/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
+    device/htc/k2_ul/idc/projector_input.idc:/system/usr/idc/projector_input.idc \
+    device/htc/k2_ul/idc/qwerty2.idc:/system/usr/idc/qwerty2.idc \
     device/htc/k2_ul/idc/qwerty.idc:system/usr/idc/qwerty.idc \
-    device/htc/k2_ul/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc
+    device/htc/k2_ul/idc/synaptics-rmi-touchscreen.idc:/system/usr/idc/synaptics-rmi-touchscreen.idc
 
 # MSM8930 firmware
 PRODUCT_COPY_FILES += \
@@ -159,9 +168,8 @@ PRODUCT_PACKAGES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
+  frameworks/native/data/etc/android.hardware.telephony.gsm.xml:/system/etc/permissions/android.hardware.telephony.gsm.xml \
+    # frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
