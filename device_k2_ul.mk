@@ -25,10 +25,10 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/k2_ul/overlay
 
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
-    device/htc/k2_ul/ramdisk/fstab.k2_ul:/root/fstab.k2_ul \
-    device/htc/k2_ul/ramdisk/init.k2_ul.rc:/root/init.k2_ul.rc \
-    device/htc/k2_ul/ramdisk/init.k2_ul.usb.rc:/root/init.k2_ul.usb.rc \
-    device/htc/k2_ul/ramdisk/ueventd.k2_ul.rc:/root/ueventd.k2_ul.rc \
+    device/htc/k2_ul/ramdisk/fstab.k2_ul:root/fstab.k2_ul \
+    device/htc/k2_ul/ramdisk/init.k2_ul.rc:root/init.k2_ul.rc \
+    device/htc/k2_ul/ramdisk/init.k2_ul.usb.rc:root/init.k2_ul.usb.rc \
+    device/htc/k2_ul/ramdisk/ueventd.k2_ul.rc:root/ueventd.k2_ul.rc \
 
 #Set default.prop properties for root + adb
 ADDITIONAL_DEFAULT_PROPERTIES += \
@@ -39,14 +39,14 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 	service.adb.root=1
 
 
-PRODUCT_COPY_FILES += device/htc/k2_ul/configs/AudioBTID.csv:/system/etc/AudioBTID.csv
+PRODUCT_COPY_FILES += device/htc/k2_ul/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 
 # QC thermald config
-PRODUCT_COPY_FILES += device/htc/k2_ul/configs/thermald.conf:/system/etc/thermald.conf
+PRODUCT_COPY_FILES += device/htc/k2_ul/configs/thermald.conf:system/etc/thermald.conf
 
 # vold config
 PRODUCT_COPY_FILES += \
-    device/htc/k2_ul/configs/vold.fstab:/system/etc/vold.fstab
+    device/htc/k2_ul/configs/vold.fstab:system/etc/vold.fstab
 
 # wifi config
 PRODUCT_COPY_FILES += \
@@ -58,11 +58,11 @@ PRODUCT_COPY_FILES += \
 
 # Sound configs
 PRODUCT_COPY_FILES += \
-    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_51.cfg:/system/etc/soundimage/srsfx_trumedia_51.cfg \
-    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_movie.cfg:/system/etc/soundimage/srsfx_trumedia_movie.cfg \
-    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_music.cfg:/system/etc/soundimage/srsfx_trumedia_music.cfg \
-    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_voice.cfg:/system/etc/soundimage/srsfx_trumedia_voice.cfg \
-    device/htc/k2_ul/dsp/soundimage/srs_geq10.cfg:/system/etc/soundimage/srs_geq10.cfg
+    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_51.cfg:system/etc/soundimage/srsfx_trumedia_51.cfg \
+    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_movie.cfg:system/etc/soundimage/srsfx_trumedia_movie.cfg \
+    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_music.cfg:system/etc/soundimage/srsfx_trumedia_music.cfg \
+    device/htc/k2_ul/dsp/soundimage/srsfx_trumedia_voice.cfg:system/etc/soundimage/srsfx_trumedia_voice.cfg \
+    device/htc/k2_ul/dsp/soundimage/srs_geq10.cfg:system/etc/soundimage/srs_geq10.cfg
 
 
 PRODUCT_COPY_FILES += \
