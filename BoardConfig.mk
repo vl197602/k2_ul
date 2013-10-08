@@ -108,7 +108,7 @@ TARGET_KERNEL_CONFIG := k2_ul_defconfig
 
 
 # Use libril in the device tree
-BOARD_PROVIDES_LIBRIL := true
+# BOARD_PROVIDES_LIBRIL := true
 
 # cat /proc/emmc
 #dev:        size     erasesize name
