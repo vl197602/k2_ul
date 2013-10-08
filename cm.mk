@@ -18,5 +18,5 @@ PRODUCT_BRAND := htc
 PRODUCT_MODEL := k2_ul
 PRODUCT_MANUFACTURER := htc
 # Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_k2_ul BUILD_FINGERPRINT=euro/htc/k2ul:4.2.2/JB_MR2/573038:user/user-debug PRIVATE_BUILD_DESC="k2_ul-user 4.2.2 JB_MR2 573038 user-debug"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_k2_ul BUILD_FINGERPRINT=euro/htc/k2ul:4.1.2/JB_MR2/573038:user/user-debug PRIVATE_BUILD_DESC="k2_ul-user 4.1.2 JB_MR2 573038 user-debug"
 
