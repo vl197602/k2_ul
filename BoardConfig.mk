@@ -55,11 +55,11 @@ TARGET_SCREEN_WIDTH := 480
 # BOARD_USES_QCOM_HARDWARE := true
 
 # Audio
-# BOARD_USES_ALSA_AUDIO := true
+BOARD_USES_ALSA_AUDIO := true
 # BOARD_HAVE_HTC_AUDIO := true
 
 # Bluetooth
-# BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/k2_ul/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/k2_ul/bluetooth
 
 # FM radio
 # BOARD_HAVE_QCOM_FM := true
