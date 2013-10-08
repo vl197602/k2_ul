@@ -76,7 +76,7 @@ PRODUCT_COPY_FILES += \
     device/htc/k2_ul/modules/gspca_main.ko:/system/lib/modules/gspca_main.ko \
    device/htc/k2_ul/modules/lcd.ko:/system/lib/modules/lcd.ko \
    device/htc/k2_ul/modules/msm-buspm-dev.ko:/system/lib/modules/msm-buspm-dev.ko \
-  device/htc/k2_ul/module/reset_modem.ko:/system/lib/modules/reset_modem.ko
+  device/htc/k2_ul/modules/reset_modem.ko:/system/lib/modules/reset_modem.ko
 
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
