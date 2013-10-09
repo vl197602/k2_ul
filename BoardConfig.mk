@@ -100,6 +100,7 @@ WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 
 BOARD_KERNEL_BASE := 0x80400000
+BOARD_RAMDISK_BASE:= 0x81808000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x81808000
 TARGET_PREBUILT_KERNEL := device/htc/k2_ul/prebuilt/kernel
