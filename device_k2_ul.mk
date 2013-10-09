@@ -39,6 +39,8 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 	service.adb.root=1
 
 
+PRODUCT_COPY_FILES +=  vendor/cm/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+PRODUCT_COPY_FILES +=  vendor/cm/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
 PRODUCT_COPY_FILES += device/htc/k2_ul/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 
 # QC thermald config
