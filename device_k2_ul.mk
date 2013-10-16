@@ -39,6 +39,8 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 	service.adb.root=1
 
 
+PRODUCT_COPY_FILES +=  vendor/cm/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+PRODUCT_COPY_FILES +=  vendor/cm/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
 PRODUCT_COPY_FILES += device/htc/k2_ul/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 
 # QC thermald config
@@ -67,7 +69,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     device/htc/k2_ul/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x \
-device/htc/k2_ul/dsp/snd_soc_msm/snd_soc_msm_Sitar:/system/etc/snd_soc_msm/snd_soc_msm_Sitar
+device/htc/k2_ul/dsp/snd_soc_msm/snd_soc_msm_Sitar:/system/etc/snd_soc_msm/snd_soc_msm_Sitar  \
+device/htc/k2_ul/dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3:/system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 
 
 PRODUCT_COPY_FILES += \
     device/htc/k2_ul/modules/bcmdhd.ko:/system/lib/modules//bcmdhd.ko \
@@ -76,7 +79,7 @@ PRODUCT_COPY_FILES += \
     device/htc/k2_ul/modules/gspca_main.ko:/system/lib/modules/gspca_main.ko \
    device/htc/k2_ul/modules/lcd.ko:/system/lib/modules/lcd.ko \
    device/htc/k2_ul/modules/msm-buspm-dev.ko:/system/lib/modules/msm-buspm-dev.ko \
-  device/htc/k2_ul/module/reset_modem.ko:/system/lib/modules/reset_modem.ko
+  device/htc/k2_ul/modules/reset_modem.ko:/system/lib/modules/reset_modem.ko
 
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
