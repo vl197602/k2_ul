@@ -70,11 +70,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/k2_ul/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x \
 device/htc/k2_ul/dsp/snd_soc_msm/snd_soc_msm_Sitar:/system/etc/snd_soc_msm/snd_soc_msm_Sitar  \
-<<<<<<< HEAD
 device/htc/k2_ul/dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3:/system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 
-=======
-device/htc/k2_ul/dsp/snd_soc_msm/snd_soc_msm_2x_Fusion3:/system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3
->>>>>>> 62e9b982d4c25a2976657f30392e08bcca27e3f3
+
+
 
 PRODUCT_COPY_FILES += \
     device/htc/k2_ul/modules/bcmdhd.ko:/system/lib/modules//bcmdhd.ko \
