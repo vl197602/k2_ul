@@ -1,4 +1,4 @@
-# Master file for snd_soc_msm tabla 2.0 sound card proj=K2 DATE= 20121126
+# Master file for snd_soc_msm tabla 2.0 sound card proj=K2 DATE= 20131017
 # Lists all use case verbs
 SectionUseCase."HiFi" { 
 SectionVerb
